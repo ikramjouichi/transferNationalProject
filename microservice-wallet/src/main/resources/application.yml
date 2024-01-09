@@ -1,0 +1,23 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8020
+#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
+spring:
+  application:
+    name: microservicewallet
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    url: jdbc:mysql://localhost:3306/transferservice
+    username: root
+    password: ikram2000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect

@@ -1,0 +1,42 @@
+vonage:
+  apiKey: f3147d8f
+  apiSecret: EGiNoZ61CH0fuJLn
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8070
+
+spring:
+  application:
+    name: microservicenotification
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    url: jdbc:mysql://localhost:3306/transferservice
+    username: root
+    password: ikram2000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: academyteamensa@gmail.com
+    password: sfkvlhgnsrdmymcx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
